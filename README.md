@@ -1,6 +1,6 @@
 # Vocab Enhancer App
 
-##About The Project
+## About The Project
 ![Logo](images/img1.png)
 ![Logo](images/img2.png)
 ![Logo](images/img3.png)
