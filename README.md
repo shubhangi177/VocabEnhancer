@@ -14,8 +14,6 @@ This section provides instructions on setting up your project locally. Follow th
 
 ### Installation Steps
 
-**Option 1: Installation from GitHub**
-
 1. **Clone the Repository**
 ```bash
 git clone https://github.com/shubhangi177/VocabEnhancer.git
