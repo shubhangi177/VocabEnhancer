@@ -59,17 +59,17 @@ async function getSuggestion(word) {
 
   const words = await res.json();
   console.log(words);
-  const match = words.find((item) =>{
+  const match = words.find((item) => {
     const value = cleanWord(item.word);
-    return(
-      value&&
-      value!==word&&
-      !item.word.includes(" ")&&
+    return (
+      value &&
+      value !== word &&
+      !item.word.includes(" ") &&
       /^[a-z-]+$/i.test(item.word)
-    )
+    );
   });
 
-  return match? cleanWord(match.word):null;
+  return match ? cleanWord(match.word) : null;
 }
 
 async function combineWord(word) {
@@ -82,41 +82,41 @@ async function combineWord(word) {
 
   try {
     const suggestion = await getSuggestion(word);
-    if(suggestion){
+    console.log(suggestion);
+    if (suggestion) {
       result.textContent = suggestion;
-      result.className = "result filled"
+      result.className = "result filled";
       setStatus("ready", "Ready");
 
-      history.unshift([word,suggestion]);
+      history.unshift([word, suggestion]);
       log.hidden = false;
       logList.innerHTML = history
-        .slice(0,6)
+        .slice(0, 6)
         .map(
-          ([word,suggestion]) =>
-            `<li><span>very ${word}</span><span>${suggestion}</span></li>`
-        ).join("")
-    }else{
-      result.textContent ="(no close match)";
-      result.className="result";
-      setStatus("ready","try another word")
+          ([word, suggestion]) =>
+            `<li><span>very ${word}</span><span>${suggestion}</span></li>`,
+        )
+        .join("");
+    } else {
+      result.textContent = "(no close match)";
+      result.className = "result";
+      setStatus("ready", "try another word");
     }
   } catch (error) {
-    result.textContent="error";
-    result.className="result";
-    setStatus("loading",
-      "Request failed - check you internet connection"
-    )
-  }finally{
-    runBtn.disabled=randomBtn.disabled=false;
+    result.textContent = "error";
+    result.className = "result";
+    setStatus("loading", "Request failed - check you internet connection");
+  } finally {
+    runBtn.disabled = randomBtn.disabled = false;
   }
 }
 
-randomBtn.addEventListener("click",()=>{
+randomBtn.addEventListener("click", () => {
   const words = Object.keys(WORDS);
-  const word = words[Math.floor(Math.random()*words.length)];
+  const word = words[Math.floor(Math.random() * words.length)];
   input.value = word;
   combineWord(word);
-})
+});
 runBtn.addEventListener("click", () => {
   const word = cleanWord(input.value);
   if (word) combineWord(word);
@@ -124,4 +124,3 @@ runBtn.addEventListener("click", () => {
 input.addEventListener("keydown", (e) => {
   if (e.key == "Enter") runBtn.click();
 });
-
