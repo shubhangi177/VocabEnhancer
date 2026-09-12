@@ -6,10 +6,7 @@
 ![Logo](images/img3.png)
 
 ## Built With
-HTML
-CSS
-JavaScript
-Datamuse API
+HTML|CSS|JavaScript|Datamuse API
 
 ## Getting Started
 
@@ -19,15 +16,15 @@ This section provides instructions on setting up your project locally. Follow th
 
 **Option 1: Installation from GitHub**
 
-1.**Clone the Repository**
+1. **Clone the Repository**
 ```bash
 git clone https://github.com/shubhangi177/VocabEnhancer.git
 ```
-2.**Open the Project**
+2. **Open the Project**
 
 Open the project folder in your preferred code editor.
 
-3.**Run the Application**
+3. **Run the Application**
 
 Open the index.html file in your web browser.
 
