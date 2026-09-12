@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vocab Enhancer</title>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <div class="badge">✎</div>
+
+        <div class="tagline">
+            Combine "very" with a plain adjective and get a sharper one.
+        </div>
+
+        <div class="status ready" id="status">
+            <span class="dot"></span>
+            <span id="status-text">Ready</span>
+        </div>
+
+        <div class="equation">
+            <span class="word">very</span>
+            <span class="op">+</span>
+            <input 
+                id="word-input"
+                type="text"
+                placeholder="boring"
+                autocomplete="off">
+            <span class="op">=</span>
+            <span class="result" id="result">tedious</span>
+        </div>
+
+        <div class="controls">
+            <button id ="run-btn">Get / Refresh</button>
+            <button id ="random-btn" class="secondary">Random</button>
+        </div>
+
+        <div class="log" id="log" hidden>
+            <h2>Earlier tries</h2>
+            <ul id="log-list"></ul>
+        </div>
+
+        <footer>
+            Powered by the <code>Datamuse</code> "means like" API — no API key, no server.
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
