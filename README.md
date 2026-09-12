@@ -5,6 +5,9 @@
 ![Logo](images/img2.png)
 ![Logo](images/img3.png)
 
+
+Vocab Enhancer is an interactive web application that suggests stronger and more expressive alternatives for common adjectives. It uses JavaScript and the Datamuse REST API to generate suitable word suggestions, with predefined mappings for common words. The application also includes random word suggestions, input validation, error handling and search history through a simple HTML and CSS interface.
+
 ## Built With
 
 - HTML
@@ -23,9 +26,11 @@ This section provides instructions on setting up your project locally. Follow th
 git clone https://github.com/shubhangi177/VocabEnhancer.git
 ```
 2. **Open the Project**
+
 Open the project folder in your preferred code editor.
 
 3. **Run the Application**
+
 Open the index.html file in your web browser.
 No API key or server setup is required. The application directly uses the Datamuse API to retrieve word suggestions.
 
