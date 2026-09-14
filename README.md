@@ -1,11 +1,13 @@
 # Vocab Enhancer App
 
+### [Live Demo](https://shubhangi177.github.io/VocabEnhancer/)
+
 ## About The Project
+
 ![Logo](images/img1.png)
 ![Logo](images/img3.png)
 ![Logo](images/img2.png)
 ![Logo](images/img4.png)
-
 
 Vocab Enhancer is an interactive web application that suggests stronger alternatives for common adjectives. It uses **JavaScript** and the **Datamuse API** to generate suitable word suggestions, with predefined mappings for common words. It also includes random word suggestions, input validation, error handling and search history.
 
@@ -23,9 +25,11 @@ This section provides instructions on setting up your project locally. Follow th
 ### Installation Steps
 
 1. **Clone the Repository**
+
 ```bash
 git clone https://github.com/shubhangi177/VocabEnhancer.git
 ```
+
 2. **Open the Project**
 
 Open the project folder in your preferred code editor.
